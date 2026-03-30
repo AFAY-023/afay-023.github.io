@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lin Jie | AI Product Portfolio</title>
+  <meta name="description" content="Portfolio homepage for Lin Jie, featuring AI product work across agentic workflows, prototype validation, and explainable AI demos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#home">LIN JIE</a>
+      <nav class="topnav" aria-label="Primary">
+        <a href="#projects" data-i18n="navProjects">项目</a>
+        <a href="#strengths" data-i18n="navStrengths">能力</a>
+        <a href="#contact" data-i18n="navContact">联系</a>
+      </nav>
+      <div class="locale-switch" role="tablist" aria-label="Language switch">
+        <button class="locale-btn active" type="button" data-locale="zh" aria-selected="true">中文</button>
+        <button class="locale-btn" type="button" data-locale="en" aria-selected="false">EN</button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow" data-i18n="eyebrow">AI Product Portfolio</span>
+          <h1 data-i18n="heroTitle">把复杂 AI workflow 做成可验证、可展示、可协作的产品体验</h1>
+          <p class="hero-lead" data-i18n="heroLead">
+            我主投 AI 产品方向，擅长把模糊场景拆成可推进的问题，再用 prototype、evaluation 和可解释 workflow
+            把它落成团队能讨论、能验证的产品方案。
+          </p>
+          <div class="hero-meta">
+            <span class="meta-chip" data-i18n="metaOne">AI Product</span>
+            <span class="meta-chip" data-i18n="metaTwo">Agentic Workflow</span>
+            <span class="meta-chip" data-i18n="metaThree">Prototype Validation</span>
+          </div>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#projects" data-i18n="heroCtaPrimary">查看重点项目</a>
+            <a class="secondary-btn" href="https://linkedin.com/in/jie-lin023" target="_blank" rel="noreferrer" data-i18n="heroCtaSecondary">LinkedIn</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <span class="panel-kicker" data-i18n="panelKicker">Current Focus</span>
+          <h2 data-i18n="panelTitle">AI 产品 x 评测验证 x 可解释 Copilot</h2>
+          <p data-i18n="panelBody">
+            近期项目聚焦医疗 AI Copilot 和城市生鲜布局决策副驾，核心工作包括场景定义、demo 验证、检索评测、产品化包装与可解释体验设计。
+          </p>
+          <ul class="stat-list">
+            <li>
+              <strong>2</strong>
+              <span data-i18n="statOne">公开项目入口</span>
+            </li>
+            <li>
+              <strong>5+</strong>
+              <span data-i18n="statTwo">多语言评测维度</span>
+            </li>
+            <li>
+              <strong>0→1</strong>
+              <span data-i18n="statThree">prototype 驱动推进</span>
+            </li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-head">
+          <span class="section-kicker" data-i18n="projectsKicker">Selected Work</span>
+          <h2 data-i18n="projectsTitle">重点项目</h2>
+          <p data-i18n="projectsIntro">
+            这两个项目分别代表我在 AI 产品方向最重要的两类能力：面向真实工作流的 AI Copilot 定义与验证，以及把复杂研究原型包装成更易理解的产品体验。
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-card-clinical">
+            <div class="card-topline">
+              <span class="card-tag" data-i18n="nightingaleTag">Clinical AI Copilot</span>
+              <span class="card-status" data-i18n="nightingaleStatus">Live Project Showcase</span>
+            </div>
+            <h3>Nightingale Demo</h3>
+            <p class="project-summary" data-i18n="nightingaleSummary">
+              面向诊所工作流的临床 AI Copilot 展示页，聚焦高风险升级、长期记忆与 AI 产品原型验证，适合快速理解我的主实习项目和产品判断方式。
+            </p>
+            <ul class="project-points">
+              <li data-i18n="nightingalePointOne">突出医疗 AI 场景中的 Human-in-the-loop 设计边界</li>
+              <li data-i18n="nightingalePointTwo">展示从需求定义到 demo 的产品推进方式</li>
+              <li data-i18n="nightingalePointThree">适合快速浏览项目叙事、视觉表达与公开展示结构</li>
+            </ul>
+            <div class="project-links">
+              <a class="primary-btn" href="https://afay-023.github.io/nightingale-demo/" target="_blank" rel="noreferrer" data-i18n="nightingalePrimary">打开项目页</a>
+              <a class="secondary-btn" href="https://github.com/AFAY-023/nightingale-demo" target="_blank" rel="noreferrer" data-i18n="nightingaleSecondary">查看 GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card project-card-retail">
+            <div class="card-topline">
+              <span class="card-tag" data-i18n="freshTag">Agentic Decision Copilot</span>
+              <span class="card-status" data-i18n="freshStatus">Public Demo</span>
+            </div>
+            <h3>FreshSite Copilot</h3>
+            <p class="project-summary" data-i18n="freshSummary">
+              将生鲜设施选址研究原型产品化为 agentic copilot demo，通过目标输入、候选点推荐、地图联动和可读解释，把复杂的知识图谱 workflow 变成更直观的产品体验。
+            </p>
+            <ul class="project-points">
+              <li data-i18n="freshPointOne">保留可解释 workflow，而不是直接做黑盒式自动决策</li>
+              <li data-i18n="freshPointTwo">把知识图谱与规则推理包装成更适合作品集展示的 AI 界面</li>
+              <li data-i18n="freshPointThree">适合展示我如何把研究成果转成面向用户的产品表达</li>
+            </ul>
+            <div class="project-links">
+              <a class="primary-btn" href="https://afay-023.github.io/fresh-site-copilot/" target="_blank" rel="noreferrer" data-i18n="freshPrimary">打开项目页</a>
+              <a class="secondary-btn" href="https://afay-023.github.io/fresh-site-copilot/method/" target="_blank" rel="noreferrer" data-i18n="freshSecondary">方法说明</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="strengths">
+        <div class="section-head">
+          <span class="section-kicker" data-i18n="strengthsKicker">What I Bring</span>
+          <h2 data-i18n="strengthsTitle">我希望被记住的三件事</h2>
+        </div>
+
+        <div class="strength-grid">
+          <article class="strength-card">
+            <h3 data-i18n="strengthOneTitle">问题定义</h3>
+            <p data-i18n="strengthOneBody">
+              能把模糊需求拆成可讨论的 AI 场景、目标边界和 success metrics，而不是只停留在“大模型可以做什么”。
+            </p>
+          </article>
+          <article class="strength-card">
+            <h3 data-i18n="strengthTwoTitle">快速验证</h3>
+            <p data-i18n="strengthTwoBody">
+              倾向用 demo、benchmark 和 workflow 原型推动判断，让团队更快从概念走到可验证的 V1。
+            </p>
+          </article>
+          <article class="strength-card">
+            <h3 data-i18n="strengthThreeTitle">可解释体验</h3>
+            <p data-i18n="strengthThreeBody">
+              比起盲目追求全自动 agent，我更关注什么时候应该做 copilot、什么时候必须保留人的决策环节。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-compact" id="contact">
+        <div class="contact-card">
+          <div>
+            <span class="section-kicker" data-i18n="contactKicker">Contact</span>
+            <h2 data-i18n="contactTitle">如果你想更快了解我</h2>
+            <p data-i18n="contactBody">
+              最建议先看 Nightingale Demo 了解我的主实习项目，再看 FreshSite Copilot 感受我如何把复杂方法包装成更清晰的产品表达。
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="primary-btn" href="mailto:Lam_Git_2002@163.com">Lam_Git_2002@163.com</a>
+            <a class="secondary-btn" href="https://linkedin.com/in/jie-lin023" target="_blank" rel="noreferrer">linkedin.com/in/jie-lin023</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span data-i18n="footerText">Built as a lightweight portfolio homepage for GitHub Pages.</span>
+      <span id="year"></span>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
