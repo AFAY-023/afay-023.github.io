@@ -126,14 +126,11 @@ button {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(320px, 0.92fr);
-  gap: 22px;
-  align-items: stretch;
+  display: block;
 }
 
 .hero-copy,
-.hero-panel,
+.hero-copy-wide,
 .project-card,
 .strength-card,
 .contact-card {
@@ -143,10 +140,15 @@ button {
   backdrop-filter: blur(14px);
 }
 
-.hero-copy,`r`n.hero-copy-wide {
+.hero-copy,
+.hero-copy-wide {
   border-radius: var(--radius-lg);
   padding: 42px 40px;
   overflow: hidden;
+}
+
+.hero-copy-wide {
+  width: 100%;
 }
 
 .hero-copy::after {
@@ -194,8 +196,8 @@ button {
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 5vw, 4.6rem);
-  max-width: 10.4ch;
+  font-size: clamp(2.5rem, 5vw, 4.7rem);
+  max-width: none;
 }
 
 .hero-lead,
@@ -219,7 +221,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .meta-chip {
@@ -238,7 +240,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .primary-btn,
@@ -322,6 +324,7 @@ button {
 
 .section-head h2 {
   font-size: clamp(1.8rem, 3vw, 3rem);
+  margin-bottom: 0;
 }
 
 .section-head p {
@@ -333,7 +336,7 @@ button {
 .strength-grid {
   display: grid;
   gap: 18px;
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
 .project-grid {
@@ -437,9 +440,9 @@ button {
 .contact-card {
   border-radius: var(--radius-lg);
   padding: 28px 30px;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
   gap: 20px;
   background:
     linear-gradient(140deg, rgba(18, 36, 48, 0.96), rgba(23, 33, 43, 0.92)),
@@ -468,20 +471,18 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 18px 4px 0;
+  padding: 14px 4px 0;
   color: var(--muted);
   font-size: 0.92rem;
 }
 
 @media (max-width: 980px) {
-  .hero,
   .project-grid,
   .strength-grid,
   .contact-card {
     grid-template-columns: 1fr;
   }
 
-  .hero,
   .contact-card {
     display: grid;
   }
@@ -507,6 +508,7 @@ button {
   }
 
   .hero-copy,
+  .hero-copy-wide,
   .hero-panel,
   .section,
   .project-card,
@@ -551,4 +553,3 @@ button {
     transition: none;
   }
 }
-
