@@ -113,6 +113,67 @@ document.addEventListener('DOMContentLoaded', async function() {
     // The manifest bytes are ours; SRI protects against CDN compromise, not this.
     template = template.replace(/\s+integrity="[^"]*"/gi, '').replace(/\s+crossorigin="[^"]*"/gi, '');
 
+    // Add the two portfolio cards to the template's own project data before
+    // the bundled page is rendered. No extra DOM observer or overlay is needed.
+    const zhProjectList = '  zh: [';
+    const enProjectList = '  en: [';
+    const zhProjectCards = `
+    {
+      eyebrows: ['AI Product / Agent Coach', 'Interactive Prototype'],
+      title: 'AI 培训陪练',
+      body: '面向助听器门店接待与验配训练的 AI 陪练 MVP，将角色、剧本、评分规则、知识库、对话练习和复盘报告组织成一条可验证的训练工作流。',
+      bullets: [
+        '从分散需求包拆解一期 MVP、PRD 与核心用户流程',
+        '以统一 AI 共创入口和上下文拆分设计 Agent 编排',
+        '通过评分、复盘、记录和评测框架形成反馈闭环',
+      ],
+      links: [
+        { label: '打开 AI 陪练原型', href: '/ai-training-coach/' },
+      ],
+    },
+    {
+      eyebrows: ['Enterprise AI Platform', 'GitHub Project'],
+      title: 'BASE Factory',
+      body: '面向企业 AI 能力沉淀与复用的工作底座，围绕 Skill、知识库、质量门、运行记录、Trace 和版本评估设计可治理的 AI 工作流。',
+      bullets: [
+        '将单点 Agent 提效抽象为可配置、可复用的业务能力底座',
+        '把需求、PRD、原型、质量检查和 Trace 组织成可追溯 Run',
+        '通过权限、审计和评估机制支持团队级 AI 资产治理',
+      ],
+      links: [
+        { label: '打开 BASE Factory Demo', href: 'https://afay-023.github.io/base-factory/' },
+      ],
+    },`;
+    const enProjectCards = `
+    {
+      eyebrows: ['AI Product / Agent Coach', 'Interactive Prototype'],
+      title: 'AI Training Coach',
+      body: 'An AI training MVP for hearing-aid retail and fitting conversations, connecting personas, scripts, scoring rules, knowledge, practice sessions, and review reports into a testable workflow.',
+      bullets: [
+        'Scoped a first-version MVP, PRD, and core user flows from fragmented requirements',
+        'Designed a unified AI co-creation entry point and context-based Agent orchestration',
+        'Connected scoring, review, history, and evaluation into a feedback loop',
+      ],
+      links: [
+        { label: 'Open AI Training Coach', href: '/ai-training-coach/' },
+      ],
+    },
+    {
+      eyebrows: ['Enterprise AI Platform', 'GitHub Project'],
+      title: 'BASE Factory',
+      body: 'An enterprise AI capability base for governing and reusing Skills, knowledge, quality gates, run history, traces, and version evaluations across team workflows.',
+      bullets: [
+        'Abstracts isolated Agent productivity into configurable, reusable work bases',
+        'Organizes requirements, PRD, prototypes, quality checks, and traces into auditable Runs',
+        'Uses permissions, audit logs, and evaluation to support team-level AI asset governance',
+      ],
+      links: [
+        { label: 'Open BASE Factory Demo', href: 'https://afay-023.github.io/base-factory/' },
+      ],
+    },`;
+    template = template.replace(zhProjectList, zhProjectList + '\n' + zhProjectCards);
+    template = template.replace(enProjectList, enProjectList + '\n' + enProjectCards);
+
     const resourceScript = '<script>window.__resources = ' +
       JSON.stringify(resourceMap).split('</' + 'script>').join('<\\/' + 'script>') +
       ';</' + 'script>';
